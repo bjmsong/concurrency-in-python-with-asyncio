@@ -23,4 +23,5 @@ thread_2.join()
 
 thread_end = time.time()
 
+# multi-threading in Python can accelerate IO-bound task
 print(f'Running with threads took {thread_end - thread_start:.4f} seconds.')

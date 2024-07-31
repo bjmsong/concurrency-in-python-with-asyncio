@@ -31,4 +31,5 @@ fibs_with_threads()
 
 end_threads = time.time()
 
+# multi-threading in python can't accelerate CPU-bound task because of GIL
 print(f'Threads took {end_threads - start_threads:.4f} seconds.')
