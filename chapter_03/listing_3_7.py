@@ -13,9 +13,11 @@ server_socket.setblocking(False)
 server_socket.bind(server_address)
 server_socket.listen()
 
+# register server_socket, interested in read event
 selector.register(server_socket, selectors.EVENT_READ)
 
 while True:
+    # block until an event has happened
     events: List[Tuple[SelectorKey, int]] = selector.select(timeout=1) #A
 
     if len(events) == 0: #B

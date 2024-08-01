@@ -1,4 +1,7 @@
 import asyncio
+import os
+import sys
+sys.path.append(os.getcwd())
 from util import async_timed
 
 

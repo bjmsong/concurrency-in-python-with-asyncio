@@ -5,6 +5,7 @@ from util import async_timed
 
 @async_timed()
 async def get_example_status() -> int:
+    # blocking
     return requests.get('https://www.example.com').status_code
 
 

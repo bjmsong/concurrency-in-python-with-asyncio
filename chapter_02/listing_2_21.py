@@ -4,7 +4,7 @@ import asyncio
 async def main():
     await asyncio.sleep(1)
 
-
+# create an event loop
 loop = asyncio.new_event_loop()
 
 try:

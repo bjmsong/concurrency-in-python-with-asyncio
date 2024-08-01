@@ -13,7 +13,9 @@ try:
 
     buffer = b''
 
+    # `\r\n`: end of input
     while buffer[-2:] != b'\r\n':
+        # read 2 bytes data one time from client
         data = connection.recv(2)
         if not data:
             break
@@ -22,5 +24,6 @@ try:
             buffer = buffer + data
 
     print(f"All the data is: {buffer}")
+    connection.sendall(buffer)  # write back to client
 finally:
     server_socket.close()

@@ -1,5 +1,6 @@
 from asyncio import Future
 
+# contains a value that you expect to get at some point in the future
 my_future = Future()
 
 print(f'Is my_future done? {my_future.done()}')
