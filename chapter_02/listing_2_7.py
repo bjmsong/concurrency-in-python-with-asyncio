@@ -17,6 +17,7 @@ async def hello_world_message() -> str:
 
 async def main() -> None:
     # hello_world_message()和add_one()仍然是串行执行的
+    # 因为协程hello_world_message()执行的时候，main()协程暂停了，没有继续往下执行
     message = await hello_world_message()
     one_plus_one = await add_one(1)
     print(message)

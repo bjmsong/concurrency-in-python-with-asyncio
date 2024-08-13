@@ -12,6 +12,8 @@ async def hello_every_second():
 
 
 async def main():
+    # run delay(3) coroutine, returns instantly
+    # we can execute other code instantly while the task is running
     first_delay = asyncio.create_task(delay(3))
     second_delay = asyncio.create_task(delay(3))
     await hello_every_second()
